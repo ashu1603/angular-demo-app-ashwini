@@ -1,0 +1,79 @@
+﻿<style>
+    .fixedbackground {
+        background-image: none;
+      background-repeat: no-repeat;
+      background-attachment: fixed;
+      background-position: center;
+      background-size: cover;
+      min-height: 100vh;
+      padding-top: 40px;
+  
+    }
+  
+    .sticky {
+      display: inline-flex;
+      width: 100%;
+      position: fixed;
+      top: 0;
+      overflow: hidden;
+      z-index: 100 !important;
+    }
+  </style>
+
+<!-- <h1>Hi {{currentUser.firstName}}!</h1>
+
+<h2>Welcome to my page:</h2> -->
+<!-- <ul>
+    <li *ngFor="let user of users">
+        {{user.username}} ({{user.firstName}} {{user.lastName}})
+     - <a (click)="deleteUser(user.id)" class="text-danger">Delete</a> 
+    </li>
+</ul> -->
+
+<div (touchstart)="swipe($event, 'start','left')" (touchend)="swipe($event, 'end','left')">
+  <div [ngStyle]="{'display':toggleClass?'block':'none'}" #sidenav class="overlay" (click)="swipePrev($event)"></div>
+<!-- <p><a [routerLink]="['/login']">Logout</a></p> -->
+<div [ngStyle]="{'width':toggleClass?'265px':'0'}" class="sidenav">
+        <div class="myHeader">
+              </div>
+   
+    <div class="imagemenu">
+            <a [routerLink]="['']" (click)="OnHamburger();" 
+            style="border-bottom:1px solid rgb(253, 202, 202)" style="border-bottom:1px solid lightgray">
+            <td>Home</td>
+          </a>
+
+      <a [routerLink]="['/dashboard']" (click)="OnHamburger();" 
+        style="border-bottom:1px solid rgb(253, 202, 202)" style="border-bottom:1px solid lightgray">
+        <td >Device List</td>
+      </a>
+
+    </div> 
+
+  </div>
+</div>
+
+<div class="header-class sticky">
+    <div class="icon-header" (click)="OnHamburger()">&#9776;</div>
+    <div class="header-text">Dashboard </div>
+    <div class="notification_icon" [routerLink]="['/login']">
+            {{currentUser.username}}  Logout
+          </div>
+  </div>
+
+  <h1>Hi {{currentUser.firstName}}!</h1>
+
+<h2>Welcome to my page</h2>
+
+<div (touchstart)="swipe($event, 'start','right')" (touchend)="swipe($event, 'end','right')">
+
+    <body>
+      <div class="fixedbackground">
+        <router-outlet>
+  
+        </router-outlet>
+  
+      </div>
+  
+    </body>
+  </div>

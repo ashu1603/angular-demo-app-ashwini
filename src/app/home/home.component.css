@@ -1,0 +1,161 @@
+
+.overlay {
+    position: fixed;
+    display: block;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgba(250,250,250,.8);
+    z-index: 5;
+}
+.sidenav {
+    height: 100%;
+    width: 0;
+    position: fixed;
+    z-index: 999999;
+    top: 0;
+    left: 0;
+    overflow-x: hidden;
+    transition: 0.5s;
+    background-color:white;
+}
+
+.sidenav a {
+    padding: 8px 8px 8px 8px;
+    text-decoration: none;
+    font-size: 16px;
+    color: #3553d8;
+    display: block;
+    transition: 0.3s;
+}
+
+.sidenav a:hover {
+    color: #f1f1f1;
+}
+
+.sidenav .closebtn {
+    position: absolute;
+    top: 0;
+    right: 25px;
+    font-size: 36px;
+    margin-left: 50px;
+}
+
+@media screen and (max-height: 450px) {
+  .sidenav {padding-top: 15px;}
+  .sidenav a {font-size: 18px;}
+}
+
+.myHeader {
+    background: url('../../assets/menu-bg.png');  
+    background-size: cover;
+    height:30%;
+    width:100%;
+}
+.container {
+    margin-bottom: 81px;
+    padding-top: 11px;
+    background-color: white;
+   }
+.profile{
+    float:none;
+    margin: 13px 83px;
+    
+}
+.profile-text{
+color:white;
+padding: 8px;
+}
+.header-class{
+    font-size:30px;
+    cursor:pointer;
+    background-color: rgba(55, 115, 226, 1);
+    color: white;
+    top:0;
+}
+
+.imagemenu{
+    display: inline-block;
+    width: 265px;
+    font-size: 18px;
+    vertical-align: middle;
+}
+.imagemenu a:hover{
+    background-color: #3498DB;
+}
+
+.dropdown-btn
+{
+    padding: 0px 0px 0px 230px;
+    text-decoration: none;
+    color: white;
+    display: block;
+    border: none;
+    background: none;
+    width: 100%;
+    cursor: pointer;
+    outline: none;
+    margin-top: -15%;
+}
+
+/*ashwini code ends here*/
+.header-text {
+    font-size: 26px;
+    position: absolute;
+    top: 4px;
+    left: 30px;
+
+}
+.notification_icon{
+    position: absolute;
+    right:40px;
+    top:9px;
+    font-size:20px;
+  
+}
+.notification_icon:hover,.notification_icon:focus{
+    outline:none;
+    text-decoration: none;
+}
+
+.help_icon{
+    position: absolute;
+    right:5px;
+    top:6px;
+    font-size:23px;
+  }
+  .help_icon:hover,.help_icon:focus{
+      outline:none;
+      text-decoration: none;
+  }
+.square-img{
+    margin:0 !important;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    width:100%;
+    margin-bottom: 0%;
+}
+/* CSS used here will be applied after bootstrap.css */
+.badge-notify{
+    background: red;
+    position: absolute;
+    top: -3px;
+    left: 11px;
+   }
+.modal-z-index{
+    z-index: 33333!important;
+}
+.notification_feedback{
+    /* position: absolute;
+    right: 79px;
+    top: 6px;
+    font-size: 22px; */
+    position: absolute;
+    right: 73px;
+    top: -2px;
+    /* font-size: 22px; */
+}
